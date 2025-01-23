@@ -4,15 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciador de times</title>
-    <link src="https://lufine.github.io/Gerenciador-de-Times/style/style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #fff;
+        }
+        .btn-add {
+            background-color: #4CAF50;
+        }
+        .btn-add:hover {
+            background-color: #45a049;
+        }
+        .btn-game {
+            background-color: #007BFF;
+        }
+        .btn-game:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Gerenciar times</h1>
-        <button class="btn btn-add" onclick="navigateTo('index')">Adicionar jogadores</button>
+        <button class="btn btn-add" onclick="navigateTo('TeamBalancer')">Adicionar jogadores</button>
         <button class="btn btn-game" onclick="navigateTo('game')">Começar jogo</button>
     </div>
 
-    <script src="https://lufine.github.io/Gerenciador-de-Times/js/script.js"></script>
+    <script>
+        function navigateTo(page) {
+            if (page === 'TeamBalancer') {
+                window.location.href = './html/TeamBalancer.html';
+            } else if (page === 'game') {
+                window.location.href = './html/game.html';
+            }
+        }
+    </script>
 </body>
 </html>
